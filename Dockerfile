@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && apt-get dist-upgrade -yq
+RUN apt-get update && apt-get dist-upgrade -yq && apt-get install ca-certificates openssl
 
 WORKDIR /root
 ENV HOME /root
