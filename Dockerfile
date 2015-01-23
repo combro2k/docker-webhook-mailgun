@@ -1,6 +1,8 @@
 FROM ubuntu:14.04
 
-RUN apt-get update && apt-get dist-upgrade
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get update && apt-get dist-upgrade -yq
 
 WORKDIR /root
 ENV HOME /root
