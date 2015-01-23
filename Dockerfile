@@ -12,4 +12,6 @@ ADD hub-listener /root/hub-listener
 
 RUN chmod +x /root/hub-listener
 
+EXPOSE 80
+
 CMD ["/root/hub-listener", "-listen=0.0.0.0:80", "-config-file=/root/config.ini"]
