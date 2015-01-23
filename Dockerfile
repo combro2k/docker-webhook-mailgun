@@ -1,7 +1,7 @@
 FROM busybox:latest
 
 WORKDIR /root
-HOME /root
+ENV HOME /root
 
 ADD config.ini /root/config.ini
 ADD hub-listener /root/hub-listener
