@@ -1,4 +1,6 @@
-FROM busybox:latest
+FROM ubuntu:14.04
+
+RUN apt-get update && apt-get dist-upgrade
 
 WORKDIR /root
 ENV HOME /root
