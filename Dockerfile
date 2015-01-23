@@ -8,4 +8,6 @@ ADD hub-listener /root/hub-listener
 
 RUN chmod +x /root/hub-listener
 
-CMD ["/root/hub-listener", "-listen=0.0.0.0:80", "-config-file=/root/hub-listener/config.ini"]
+VOLUME ["/root/config.ini"]
+
+CMD ["/root/hub-listener", "-listen=0.0.0.0:80", "-config-file=/root/config.ini"]
